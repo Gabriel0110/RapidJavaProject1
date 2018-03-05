@@ -18,9 +18,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Exercise38_19</title>
 
-        <script type="text/javascript">$(document).ready(function(){$("#a1").click(function(){$(this).text("The correct answer is C");$(this).append("<div style = 'color: purple; font-family: Times New Roman;'> Explanation:  The count is initialized to 0 before the loop. The loop is executed 10 times for count from 1 to 9. When count is 10, the loop continuation condition becomes false. The loop is finished. So, the correct answer is C.</div>");});});</script> 
+        <script type="text/javascript">$(document).ready(function(){$("#a1").click(function(){$(this).text("The correct answer is C");$(this).append("<div style = 'color: purple; font-family: Times New Roman;'>" + ${questions.getHint()} + "</div>");});});</script> 
 
-        <script type="text/javascript">$(document).ready(function() {$("#a2").click(function() {$(this).text("The correct answer is C"); $(this).append("<div style = 'color: purple; font-family: Times New Roman;'> Explanation:  The count is initialized to 0 before the loop. The loop is executed 10 times for count from 1 to 9. When count is 10, the loop continuation condition becomes false. The loop is finished. So, the correct answer is C.</div>"); }); });</script>
+        <script type="text/javascript">$(document).ready(function() {$("#a2").click(function() {$(this).text("The correct answer is C"); $(this).append("<div style = 'color: purple; font-family: Times New Roman;'>" + ${questions.getHint()} + "</div>"); }); });</script>
     </head>
     <body>
         <h3 id="h3style" style ="width: 500px auto; max-width: 620px; margin: 0 auto; color: white; font-family: Helvetica, sans-serif;  font-size: 100%; border-color: #6193cb; text-align: center;margin-bottom: 0.5em; background-color: #6193cb">Multiple-Choice Question: Chapter <%= questions.getChapterNo()%> Question <%= questions.getQuestionNo()%></h3>
