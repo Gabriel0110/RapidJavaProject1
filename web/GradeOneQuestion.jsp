@@ -59,7 +59,10 @@
                                         </c:when>
                                         <c:otherwise>
                                             <span style = "color: red"> Your answer is incorrect! <img border="0" src="wrong.jpg" width="28" height="28"></span><br>
-                                            <div id = "a2" style = "color: green"> Click here to show an explanation</div>
+                                            <div id = "a2" style = "color: green"> Click here to show an explanation</div><br/>
+                                            <c:if test="${questions.getHint() != null}">
+                                                Hint: <% questions.getHint(); %>
+                                            </c:if>
                                         </c:otherwise>
                                     </c:choose>
                                 </form>
@@ -93,7 +96,10 @@
                                         </c:when>
                                         <c:otherwise>
                                             <span style = "color: red"> Your answer is incorrect! <img border="0" src="wrong.jpg" width="28" height="28"></span><br>
-                                            <div id = "a2" style = "color: green"> Click here to show an explanation</div> 
+                                            <div id = "a2" style = "color: green"> Click here to show an explanation</div><br/>
+                                            <c:if test="${questions.getHint() != null}">
+                                                Hint: <% questions.getHint(); %>
+                                            </c:if>
                                         </c:otherwise>
                                     </c:choose>
                                 </form>
