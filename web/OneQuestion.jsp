@@ -4,8 +4,6 @@
 <jsp:useBean id= "questions" class= "project01.Question" scope="session"></jsp:useBean>
 <jsp:setProperty name="questions" property="*"/>
 
-
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
