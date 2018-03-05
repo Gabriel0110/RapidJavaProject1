@@ -11,7 +11,7 @@
     </head>
     <body>
         <h3 id="h3style" style ="width: 500px auto; max-width: 620px; margin: 0 auto; color: white; font-family: Helvetica, sans-serif;  font-size: 100%; border-color: #6193cb; text-align: center;margin-bottom: 0.5em; background-color: #6193cb">Multiple-Choice Question: Chapter <%= questions.getChapterNo()%> Question <%= questions.getQuestionNo()%></h3>
-        <table align="center">
+        <table align="center" style="width: 500px auto; max-width: 620px; margin: 0 auto; border: 1px solid #f6912f; font-weight: normal ">
             <tr>
                 <td>
                     <fieldset>
