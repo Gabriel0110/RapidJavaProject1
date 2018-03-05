@@ -18,8 +18,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Exercise38_19</title>
 
-        <script type="text/javascript">$(document).ready(function(){$("#a1").click(function(){$(this).text("TEST");$(this).append("<div style = 'color: purple; font-family: Times New Roman;'>" + ${questions.getHint()} + "</div>");});});</script> 
-        <script type="text/javascript">$(document).ready(function() {$("#a2").click(function() {$(this).text("TEST"); $(this).append("<div style = 'color: purple; font-family: Times New Roman;'>" + ${questions.getHint()} + "</div>"); }); });</script>
+        <script type="text/javascript">$(document).ready(function () {
+                $("#a1").click(function () {
+                    $(this).text("TEST");
+                    $(this).append("<div style = 'color: purple; font-family: Times New Roman;'>" + ${questions.getHint()} + "</div>");
+                });
+            });</script> 
+        <script type="text/javascript">$(document).ready(function () {
+                $("#a2").click(function () {
+                    $(this).text("TEST"); $(this).append("<div style = 'color: purple; font-family: Times New Roman;'>" + ${questions.getHint()} + "</div>");
+                });
+            });</script>
     </head>
     <body>
         <h3 id="h3style" style ="width: 500px auto; max-width: 620px; margin: 0 auto; color: white; font-family: Helvetica, sans-serif;  font-size: 100%; border-color: #6193cb; text-align: center;margin-bottom: 0.5em; background-color: #6193cb">Multiple-Choice Question: Chapter <%= questions.getChapterNo()%> Question <%= questions.getQuestionNo()%></h3>
@@ -60,6 +69,7 @@
                                             <span style = "color: red"> Your answer is incorrect! <img border="0" src="wrong.jpg" width="28" height="28"></span><br>
                                             <div id = "a2" style = "color: green"> Click here to show an explanation</div><br/>
                                             <c:if test="${questions.getHint() != null}">
+                                                The correct answer for this question is: <% questions.getAnswerKey(); %><jsp:getProperty name="questions" property="answerKey" /><br/>
                                                 Hint: <label style="color: purple"><% questions.getHint(); %><jsp:getProperty name="questions" property="hint" /></label>
                                             </c:if>
                                         </c:otherwise>
@@ -97,7 +107,8 @@
                                             <span style = "color: red"> Your answer is incorrect! <img border="0" src="wrong.jpg" width="28" height="28"></span><br>
                                             <div id = "a2" style = "color: green"> Click here to show an explanation</div><br/>
                                             <c:if test="${questions.getHint() != null}">
-                                                Hint: <label style="color: purple"><% questions.getHint(); %><jsp:getProperty name="questions" property="hint" /></label>
+                                                The correct answer for this question is: <% questions.getAnswerKey(); %><jsp:getProperty name="questions" property="answerKey" /><br/>
+                                                Hint: <label style="color: purple"><% questions.getHint();%><jsp:getProperty name="questions" property="hint" /></label>
                                             </c:if>
                                         </c:otherwise>
                                     </c:choose>
